@@ -6,4 +6,9 @@ tasks:
       cd yew-app
       trunk build
   - name: "serving app"
-    command: "trunk serve"
+    command: |
+      cd yew-app
+      trunk serve
+ports:
+  - port: 8000
+    onOpen: open-preview
